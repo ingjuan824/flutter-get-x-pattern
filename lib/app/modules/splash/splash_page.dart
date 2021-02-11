@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
+import 'package:get_X_pattern/app/modules/splash/splash_controller.dart';
 
 class SplashPage extends StatelessWidget {
 
@@ -7,9 +8,12 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder(
-//      init: ya el init no lo colocariamos que de eso se encargara nuestro binding ,
+    return GetBuilder<SplashController>(
+
       builder: (_)=>Scaffold(
+        body: Center(
+          child: CircularProgressIndicator()
+        ),
       
     ));
   }
